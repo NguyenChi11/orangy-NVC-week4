@@ -1,0 +1,13 @@
+@import "./base/mixins";
+@import "./base/variables";
+@import "./components/header";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+}
