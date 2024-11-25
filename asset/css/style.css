@@ -1,17 +1,115 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 3 | @import "./components/header";
- *   |         ^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss\style.scss 3:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 3 \2502  @import \"./components/header\";\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\style.scss 3:9  root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.header__information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #000000;
+  text-align: center;
 }
+.header__information .header__address,
+.header__information .header__phone {
+  margin: 5px 20px;
+}
+.header__information .header__address a,
+.header__information .header__phone a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+.header__information .header__address:hover,
+.header__information .header__phone:hover {
+  cursor: pointer;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-align: center;
+  font-size: 32px;
+  font-family: "Lora";
+  font-weight: 500;
+  margin: 1px;
+}
+
+.icon__arrow {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 1919px) {
+  .header__logo {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1440px) {
+  .header__logo {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .header__logo {
+    font-size: 28px;
+  }
+  .icon__arrow {
+    color: #ffffff;
+    display: block;
+    align-items: center;
+    margin: 10px;
+  }
+  .turn__off {
+    display: none;
+  }
+  .turn__on {
+    display: block;
+  }
+  .header__information a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 391px) {
+  .header__logo {
+    font-size: 26px;
+  }
+  .icon__arrow {
+    color: #ffffff;
+    display: block;
+    align-items: center;
+    margin: 10px;
+  }
+  .turn__off {
+    display: none;
+  }
+  .turn__on {
+    display: block;
+  }
+  .header__information a {
+    font-size: 14px;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+/*# sourceMappingURL=style.css.map */
