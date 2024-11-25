@@ -1,0 +1,88 @@
+.banner {
+  background-image: url(../../asset/images/banner.png);
+  height: 1080px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include center-flex;
+  margin-bottom: 20px;
+  &__content {
+    font-family: "Lora";
+    margin-top: 30px;
+    h1 {
+      font-size: 72px;
+      font-weight: 400;
+      color: $color-white;
+      width: 350px;
+      margin: 0 20px;
+    }
+    h4 {
+      color: $color-white;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      margin-left: 20px;
+      margin-top: 24px;
+      font-family: Poppins;
+    }
+    &__title {
+      margin-top: 30px;
+      p {
+        display: inline;
+        border-bottom: 2px solid $color-white;
+        font-size: 16px;
+        color: $color-white;
+        font-family: Poppins;
+      }
+    }
+  }
+}
+
+@media (max-width: 1919px) {
+  .banner {
+    height: 900px;
+    &__content h1 {
+      font-size: 62px;
+      line-height: 84px;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .banner {
+    height: 800px;
+    &__content h1 {
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 700px;
+    &__content h1 {
+      font-size: 56px;
+      line-height: 80px;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .banner {
+    height: 600px;
+    &__content {
+      margin-bottom: 28px;
+      h1 {
+        font-size: 56px;
+        line-height: 76.8px;
+        margin-bottom: -8px;
+      }
+      h4 {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 22px;
+        margin-left: 22px;
+      }
+    }
+  }
+}
