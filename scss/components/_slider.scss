@@ -1,0 +1,97 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.slider__title {
+  @include center-flex;
+  margin-top: 28px;
+  margin-bottom: 52px;
+  h1 {
+    font-family: "Lora";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+
+.slider {
+  margin: 0 13%;
+}
+
+.splide__slide {
+  .product__slider {
+    .product__image {
+      width: 100%;
+    }
+  }
+  .category {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    margin-top: 10px;
+  }
+  .product__name {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25.88px;
+    text-align: left;
+    margin: 5px 0;
+  }
+  .product__price__all {
+    display: flex;
+    gap: 10px;
+    .product__price__new {
+      color: red;
+    }
+
+    .product__price__old {
+      text-decoration: line-through;
+    }
+    .product__price,
+    .product__price__new,
+    .product__price__old {
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.5px;
+      text-align: left;
+    }
+  }
+  .voucher {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    color: $color-white;
+    font-size: small;
+    font-family: Poppins;
+    text-align: start;
+    &__sell {
+      background: $color-black;
+      padding: 2px 12px;
+      @include font-voucher;
+      margin: 0;
+    }
+    &__new {
+      background: $color-green;
+      padding: 2px 10px;
+      @include font-voucher;
+      display: inline-flex;
+    }
+    .product__voucher {
+      position: absolute;
+      top: 8px;
+      background: $color-red;
+      display: inline;
+      padding: 10px;
+      @include font-voucher;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .slider {
+    margin: 0 1%;
+  }
+}
