@@ -13,10 +13,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
 @mixin icon-arrow {
   color: $color-white;
   display: block;
   align-items: center;
+}
+
+@mixin font-voucher {
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: left;
 }
