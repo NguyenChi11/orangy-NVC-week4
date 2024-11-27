@@ -1,0 +1,123 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.inspiration {
+  @include center-flex;
+  flex-direction: column;
+  margin: 0 13%;
+  &__title {
+    @include center-flex;
+    margin: 100px 0 60px 0;
+    h2 {
+      font-family: Lora;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 48px;
+      text-align: center;
+      width: 550px;
+    }
+  }
+  &__full {
+    @include center-flex;
+    .inspiration__body {
+      @include center-flex;
+      gap: 84px;
+      .inspiration__item {
+        img {
+          width: 100%;
+        }
+        h3 {
+          font-family: Lora;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 32px;
+          text-align: left;
+          margin: 15px 0 8px;
+        }
+        p {
+          font-family: Poppins;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .inspiration {
+    &__title {
+      margin: 60px;
+      h2 {
+        font-size: 32px;
+        width: 500px;
+      }
+    }
+    &__full {
+      .inspiration__body {
+        gap: 40px;
+        .inspiration__item {
+          h3 {
+            font-size: 22px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .inspiration {
+    &__full {
+      .inspiration__body {
+        gap: 10px;
+        .inspiration__item {
+          h3 {
+            font-size: 18px;
+            margin: 2px 0 2px;
+          }
+          p {
+            font-size: 8px;
+            line-height: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .inspiration {
+    margin: 0 1%;
+    &__title {
+      margin: 50px;
+      h2 {
+        font-size: 24px;
+        width: 400px;
+        line-height: 35px;
+      }
+    }
+    &__full {
+      width: 100%;
+      overflow: scroll;
+      .inspiration__body {
+        gap: 20px;
+        .inspiration__item {
+          width: 265px;
+          h3 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .header__information {
   display: flex;
   justify-content: space-between;
@@ -1115,7 +1117,7 @@
 @media (max-width: 520px) {
   .form__title {
     font-size: 32px;
-    width: 450px;
+    width: 400px;
   }
   .form__wrapper__input {
     display: grid;
@@ -1141,7 +1143,7 @@
 @media (max-width: 390px) {
   .form__title {
     font-size: 32px;
-    width: 450px;
+    width: 360px;
   }
   .form__wrapper__input {
     display: grid;
@@ -1162,6 +1164,122 @@
   }
   .form__wrapper__message p {
     margin-bottom: 4px;
+  }
+}
+.inspiration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 0 13%;
+}
+.inspiration__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 100px 0 60px 0;
+}
+.inspiration__title h2 {
+  font-family: Lora;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+  width: 550px;
+}
+.inspiration__full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.inspiration__full .inspiration__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 84px;
+}
+.inspiration__full .inspiration__body .inspiration__item img {
+  width: 100%;
+}
+.inspiration__full .inspiration__body .inspiration__item h3 {
+  font-family: Lora;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  margin: 15px 0 8px;
+}
+.inspiration__full .inspiration__body .inspiration__item p {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+@media (max-width: 1600px) {
+  .inspiration__title {
+    margin: 60px;
+  }
+  .inspiration__title h2 {
+    font-size: 32px;
+    width: 500px;
+  }
+  .inspiration__full .inspiration__body {
+    gap: 40px;
+  }
+  .inspiration__full .inspiration__body .inspiration__item h3 {
+    font-size: 22px;
+  }
+  .inspiration__full .inspiration__body .inspiration__item p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1200px) {
+  .inspiration__full .inspiration__body {
+    gap: 10px;
+  }
+  .inspiration__full .inspiration__body .inspiration__item h3 {
+    font-size: 18px;
+    margin: 2px 0 2px;
+  }
+  .inspiration__full .inspiration__body .inspiration__item p {
+    font-size: 8px;
+    line-height: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .inspiration {
+    margin: 0 1%;
+  }
+  .inspiration__title {
+    margin: 50px;
+  }
+  .inspiration__title h2 {
+    font-size: 24px;
+    width: 400px;
+    line-height: 35px;
+  }
+  .inspiration__full {
+    width: 100%;
+    overflow: scroll;
+  }
+  .inspiration__full .inspiration__body {
+    gap: 20px;
+  }
+  .inspiration__full .inspiration__body .inspiration__item {
+    width: 265px;
+  }
+  .inspiration__full .inspiration__body .inspiration__item h3 {
+    font-size: 20px;
+  }
+  .inspiration__full .inspiration__body .inspiration__item p {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 * {
