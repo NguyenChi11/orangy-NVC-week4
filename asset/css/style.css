@@ -2374,6 +2374,38 @@ footer .footer .icon i {
   opacity: 1;
 }
 
+.form {
+  position: relative;
+}
+
+.popup-recaptcha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 500;
+  top: 0;
+  left: 0;
+}
+.popup-recaptcha .g-recaptcha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.popup-recaptcha.action {
+  visibility: visible;
+  opacity: 1;
+}
+
 * {
   padding: 0;
   margin: 0;
