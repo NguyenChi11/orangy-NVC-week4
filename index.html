@@ -35,6 +35,32 @@
         </div>
       </div>
     </div>
+
+    <!-- popup success -->
+    <div class="popup-success" id="popup">
+      <div class="popup-wrapper">
+        <div class="popup-content">
+          <h1>Thank you!Data has been sent successfully.</h1>
+          <div class="icon-popup-fetch">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- popup error -->
+    <div class="popup-overlay popup-error" id="popup">
+      <div class="popup-wrapper">
+        <div class="popup-content">
+          <h1>
+            Oops! An error occurred.Please check your information and try again.
+          </h1>
+          <div class="icon-popup-fecth">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </div>
+        </div>
+      </div>
+    </div>
     <header>
       <div class="header__information">
         <div class="icon__arrow arrow__left">
@@ -142,35 +168,57 @@
       </div>
       <form action="" method="POST" id="form-1" class="form__wrapper">
         <div class="form__wrapper__input">
-          <div class="form-group input__name">
+          <div class="input__name form-group">
             <label for="fullname" class="form-label">Name *</label>
-            <input id="fullname" type="text" placeholder="Name" />
+            <input
+              class="input-form"
+              id="fullname"
+              type="text"
+              placeholder="Name"
+            />
             <span class="form-message"></span>
           </div>
           <div class="input__email">
             <label for="email" class="form-label">Email *</label>
-            <input id="email" type="email" placeholder="Email" />
+            <input
+              class="input-form"
+              id="email"
+              type="email"
+              placeholder="Email"
+            />
             <span class="form-message"></span>
           </div>
           <div class="input__phone">
             <label for="phone" class="form-label">Phone *</label>
-            <input id="phone" type="number" placeholder="Phone" />
+            <input
+              class="input-form"
+              id="phone"
+              type="number"
+              placeholder="Phone"
+            />
             <span class="form-message"></span>
           </div>
           <div class="input__address">
             <label for="address" class="form-label">Address</label>
-            <input id="address" type="text" placeholder="Address" />
+            <input
+              class="input-form"
+              id="address"
+              type="text"
+              placeholder="Address"
+            />
             <span class="form-message"></span>
           </div>
         </div>
         <div class="form__wrapper__message">
           <label>Your message</label>
           <textarea
+            class="input-form"
+            id="text-message"
             placeholder="Example: I want to buy 6 chairs and a table brand Oda ottoman..."
           ></textarea>
         </div>
         <div class="form__wrapper__button">
-          <button class="input-btn">SUBMIT NOW</button>
+          <button type="submit" class="input-btn">SUBMIT NOW</button>
           <p class="input__required">* Required</p>
         </div>
       </form>
@@ -475,6 +523,7 @@
     <script type="module" src="./javascript/cookie.js"></script>
     <script type="module" src="./javascript/validator.js"></script>
     <script type="module" src="./javascript/data.js"></script>
+    <script type="module" src="./javascript/submitForm.js"></script>
     <script type="module" src="./javascript/product__all__list.js"></script>
     <script></script>
   </body>

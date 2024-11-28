@@ -1,6 +1,8 @@
 @import "../base/mixins";
 @import "../base/variables";
 
+.popup-success,
+.popup-error,
 .popup-overlay {
   @include center-flex;
   background: $background;
@@ -14,6 +16,15 @@
   .popup-wrapper {
     @include center-flex;
     height: 420px;
+    width: 900px;
+    h1 {
+      font-family: Lora;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 56px;
+      text-align: center;
+      margin: 10px 20px;
+    }
     .popup-image {
       img {
         width: 100%;
@@ -25,7 +36,6 @@
     .popup-content {
       @include center-flex;
       flex-direction: column;
-      width: 460px;
       height: 100%;
       background: $color-white;
       position: relative;
@@ -43,6 +53,7 @@
         line-height: 56px;
         text-align: center;
         width: 300px;
+        margin: 0px 70px;
       }
       p {
         font-family: Poppins;
@@ -51,9 +62,10 @@
         line-height: 24px;
         text-align: center;
         width: 200px;
-        margin-top: 20px;
+        margin-top: px;
       }
-      .icon-popup {
+      .icon-popup,
+      .icon-popup-fetch {
         i {
           font-size: 36px;
         }
@@ -65,6 +77,16 @@
   }
 }
 .popup-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-error.action {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-success.action {
   visibility: visible;
   opacity: 1;
 }

@@ -15,11 +15,35 @@ function Validator(options) {
       inputElement.parentElement.classList.remove("invalid");
       inputElement.classList.remove("invalid-input");
     }
+    return !errorMessage;
   }
 
   // lấy element của form cần validate
   var formElement = document.querySelector(options.form);
+  // lấy ra thẻ input
+  var inputList = formElement.querySelectorAll(".input-form");
+  // console.log(formElement);
+  // console.log(inputList);
   if (formElement) {
+    formElement.onsubmit = function (e) {
+      e.preventDefault();
+
+      var isFormValid = true;
+      // lặp qua từng rules và validate
+      options.rules.forEach(function (rule) {
+        var inputElement = formElement.querySelector(rule.selector);
+        var isValid = validate(inputElement, rule);
+        if (!isValid) {
+          isFormValid = false;
+        }
+      });
+      if (isFormValid) {
+        if (typeof options.onSubmit === "function") {
+          //   var enableInputs = formElement.querySelectorAll('.input-form');
+          //   console.log(enableInputs);
+        }
+      }
+    };
     options.rules.forEach(function (rule) {
       var inputElement = formElement.querySelector(rule.selector);
 
@@ -50,7 +74,6 @@ Validator.isRequired = function (selector) {
     },
   };
 };
-
 Validator.isEmail = function (selector) {
   return {
     selector: selector,
@@ -71,6 +94,13 @@ Validator.isPhone = function (selector) {
   };
 };
 
+Validator.isAddress = function (selector) {
+  return {
+    selector: selector,
+    test: function () {},
+  };
+};
+
 Validator({
   form: "#form-1",
   errorSelector: ".form-message",
@@ -78,5 +108,9 @@ Validator({
     Validator.isRequired("#fullname"),
     Validator.isEmail("#email"),
     Validator.isPhone("#phone"),
+    Validator.isAddress("#address"),
   ],
+  onSubmit: function (data) {
+    console.log(data);
+  },
 });
