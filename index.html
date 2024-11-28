@@ -140,27 +140,31 @@
       <div class="form__title">
         Contact us to order and receive purchase advice
       </div>
-      <div class="form__wrapper">
+      <form action="" method="POST" id="form-1" class="form__wrapper">
         <div class="form__wrapper__input">
-          <div class="input__name">
-            <p>Name *</p>
-            <input type="text" placeholder="Name" />
+          <div class="form-group input__name">
+            <label for="fullname" class="form-label">Name *</label>
+            <input id="fullname" type="text" placeholder="Name" />
+            <span class="form-message"></span>
           </div>
           <div class="input__email">
-            <p>Email *</p>
-            <input type="email" placeholder="Email" />
+            <label for="email" class="form-label">Email *</label>
+            <input id="email" type="email" placeholder="Email" />
+            <span class="form-message"></span>
           </div>
           <div class="input__phone">
-            <p>Phone *</p>
-            <input type="number" placeholder="Phone" />
+            <label for="phone" class="form-label">Phone *</label>
+            <input id="phone" type="number" placeholder="Phone" />
+            <span class="form-message"></span>
           </div>
           <div class="input__address">
-            <p>Address</p>
-            <input type="text" placeholder="Address" />
+            <label for="address" class="form-label">Address</label>
+            <input id="address" type="text" placeholder="Address" />
+            <span class="form-message"></span>
           </div>
         </div>
         <div class="form__wrapper__message">
-          <p>Your message</p>
+          <label>Your message</label>
           <textarea
             placeholder="Example: I want to buy 6 chairs and a table brand Oda ottoman..."
           ></textarea>
@@ -169,7 +173,7 @@
           <button class="input-btn">SUBMIT NOW</button>
           <p class="input__required">* Required</p>
         </div>
-      </div>
+      </form>
     </div>
 
     <!-- Inspiration -->
@@ -463,13 +467,15 @@
         <p>© 2024 Orangy</p>
       </div>
     </footer>
+    <script type="module" src="./javascript/header.js"></script>
+    <script type="module" src="./javascript/app.js"></script>
+    <script type="module" src="./javascript/product__menu.js"></script>
+    <script type="module" src="./javascript/slider.js"></script>
+    <script type="module" src="./javascript/faq.js"></script>
+    <script type="module" src="./javascript/cookie.js"></script>
+    <script type="module" src="./javascript/validator.js"></script>
+    <script type="module" src="./javascript/data.js"></script>
+    <script type="module" src="./javascript/product__all__list.js"></script>
+    <script></script>
   </body>
-  <script type="module" src="./javascript/header.js"></script>
-  <script type="module" src="./javascript/app.js"></script>
-  <script type="module" src="./javascript/product__menu.js"></script>
-  <script type="module" src="./javascript/slider.js"></script>
-  <script type="module" src="./javascript/faq.js"></script>
-  <script type="module" src="./javascript/cookie.js"></script>
-  <script type="module" src="./javascript/data.js"></script>
-  <script type="module" src="./javascript/product__all__list.js"></script>
 </html>
