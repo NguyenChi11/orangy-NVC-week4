@@ -31,17 +31,24 @@
         input {
           @include input-style;
         }
-        p {
-          text-align: start;
+        label {
+          display: flex;
           margin-bottom: 10px;
+        }
+        span {
+          display: flex;
+          margin: 10px 2px;
+          font-size: 16px;
+          font-family: Poppins;
         }
       }
     }
     &__message {
       text-align: start;
       margin-top: 14px;
-      p {
-        margin-bottom: 4px;
+      label {
+        display: flex;
+        margin-bottom: 6px;
       }
       textarea {
         width: 100%;
@@ -69,6 +76,13 @@
       }
     }
   }
+}
+
+.invalid {
+  color: $color-red;
+}
+.invalid-input {
+  border: 2px solid $color-red;
 }
 
 @media (max-width: 1600px) {

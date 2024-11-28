@@ -902,19 +902,29 @@
   font-family: "POPPINS";
   padding-left: 15px;
 }
-.form__wrapper__input .input__name p,
-.form__wrapper__input .input__email p,
-.form__wrapper__input .input__address p,
-.form__wrapper__input .input__phone p {
-  text-align: start;
+.form__wrapper__input .input__name label,
+.form__wrapper__input .input__email label,
+.form__wrapper__input .input__address label,
+.form__wrapper__input .input__phone label {
+  display: flex;
   margin-bottom: 10px;
+}
+.form__wrapper__input .input__name span,
+.form__wrapper__input .input__email span,
+.form__wrapper__input .input__address span,
+.form__wrapper__input .input__phone span {
+  display: flex;
+  margin: 10px 2px;
+  font-size: 16px;
+  font-family: Poppins;
 }
 .form__wrapper__message {
   text-align: start;
   margin-top: 14px;
 }
-.form__wrapper__message p {
-  margin-bottom: 4px;
+.form__wrapper__message label {
+  display: flex;
+  margin-bottom: 6px;
 }
 .form__wrapper__message textarea {
   width: 100%;
@@ -939,6 +949,14 @@
 .form__wrapper__button p {
   margin-top: 20px;
   margin-bottom: 54px;
+}
+
+.invalid {
+  color: #a42003;
+}
+
+.invalid-input {
+  border: 2px solid #a42003;
 }
 
 @media (max-width: 1600px) {
