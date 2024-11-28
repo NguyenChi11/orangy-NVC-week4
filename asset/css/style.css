@@ -2253,6 +2253,8 @@ footer .footer .icon i {
     text-align: left;
   }
 }
+.popup-success,
+.popup-error,
 .popup-overlay {
   display: flex;
   justify-content: center;
@@ -2267,30 +2269,48 @@ footer .footer .icon i {
   transition: opacity 0.3s, visibility 0.3s;
   z-index: 1000;
 }
+.popup-success .popup-wrapper,
+.popup-error .popup-wrapper,
 .popup-overlay .popup-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 420px;
+  width: 900px;
 }
+.popup-success .popup-wrapper h1,
+.popup-error .popup-wrapper h1,
+.popup-overlay .popup-wrapper h1 {
+  font-family: Lora;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: center;
+  margin: 10px 20px;
+}
+.popup-success .popup-wrapper .popup-image img,
+.popup-error .popup-wrapper .popup-image img,
 .popup-overlay .popup-wrapper .popup-image img {
   width: 100%;
   height: auto;
   object-fit: contain;
   margin-top: 6px;
 }
+.popup-success .popup-wrapper .popup-content,
+.popup-error .popup-wrapper .popup-content,
 .popup-overlay .popup-wrapper .popup-content {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
-  width: 460px;
   height: 100%;
   background: #ffffff;
   position: relative;
 }
+.popup-success .popup-wrapper .popup-content h3,
+.popup-error .popup-wrapper .popup-content h3,
 .popup-overlay .popup-wrapper .popup-content h3 {
   font-family: Lora;
   font-size: 34px;
@@ -2298,6 +2318,8 @@ footer .footer .icon i {
   line-height: 56px;
   text-align: center;
 }
+.popup-success .popup-wrapper .popup-content h2,
+.popup-error .popup-wrapper .popup-content h2,
 .popup-overlay .popup-wrapper .popup-content h2 {
   font-family: Lora;
   font-size: 36px;
@@ -2305,7 +2327,10 @@ footer .footer .icon i {
   line-height: 56px;
   text-align: center;
   width: 300px;
+  margin: 0px 70px;
 }
+.popup-success .popup-wrapper .popup-content p,
+.popup-error .popup-wrapper .popup-content p,
 .popup-overlay .popup-wrapper .popup-content p {
   font-family: Poppins;
   font-size: 14px;
@@ -2313,18 +2338,38 @@ footer .footer .icon i {
   line-height: 24px;
   text-align: center;
   width: 200px;
-  margin-top: 20px;
+  margin-top: px;
 }
-.popup-overlay .popup-wrapper .popup-content .icon-popup {
+.popup-success .popup-wrapper .popup-content .icon-popup,
+.popup-success .popup-wrapper .popup-content .icon-popup-fetch,
+.popup-error .popup-wrapper .popup-content .icon-popup,
+.popup-error .popup-wrapper .popup-content .icon-popup-fetch,
+.popup-overlay .popup-wrapper .popup-content .icon-popup,
+.popup-overlay .popup-wrapper .popup-content .icon-popup-fetch {
   position: absolute;
   top: 2%;
   right: 2%;
 }
-.popup-overlay .popup-wrapper .popup-content .icon-popup i {
+.popup-success .popup-wrapper .popup-content .icon-popup i,
+.popup-success .popup-wrapper .popup-content .icon-popup-fetch i,
+.popup-error .popup-wrapper .popup-content .icon-popup i,
+.popup-error .popup-wrapper .popup-content .icon-popup-fetch i,
+.popup-overlay .popup-wrapper .popup-content .icon-popup i,
+.popup-overlay .popup-wrapper .popup-content .icon-popup-fetch i {
   font-size: 36px;
 }
 
 .popup-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-error.action {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-success.action {
   visibility: visible;
   opacity: 1;
 }
