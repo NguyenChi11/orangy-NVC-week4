@@ -9,8 +9,10 @@ const popupSuccess = document.querySelector(".popup-success");
 const popupError = document.querySelector(".popup-error");
 const turnOff = document.querySelector(".icon-popup-fetch");
 
+const recaptcha = document.querySelector(".popup-recaptcha");
+
 const inputs = document.querySelectorAll(".input-form");
-console.log(inputs);
+// console.log(inputs);
 // console.log(fullName);
 // console.log(email);
 // console.log(phone);
@@ -49,10 +51,8 @@ formEl.addEventListener("submit", (event) => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Log response từ server
-        popupSuccess.classList.add("action");
-        turnOff.addEventListener("click", () => {
-          popupSuccess.classList.remove("action");
-        });
+        recaptcha.classList.add("action");
+        showPopupSuccess();
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -61,5 +61,11 @@ formEl.addEventListener("submit", (event) => {
           popupError.classList.remove("action");
         });
       });
+    function showPopupSuccess() {
+      popupSuccess.classList.add("action");
+      turnOff.addEventListener("click", () => {
+        popupSuccess.classList.remove("action");
+      });
+    }
   }
 });
