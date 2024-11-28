@@ -95,3 +95,14 @@
     margin: 0 1%;
   }
 }
+@media (max-width: 391px) {
+  .slider__title {
+    h1 {
+      font-size: 28px;
+      line-height: 8px;
+    }
+  }
+  .slider {
+    margin: 0 1%;
+  }
+}

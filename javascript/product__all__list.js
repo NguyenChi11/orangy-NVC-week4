@@ -21,8 +21,8 @@ const products__all__list = [
       {
         id: 3,
         image: "../asset/images/product_3.jpg",
-        category: "DINING CHAR",
-        product__name: "Oda ottoman",
+        category: " DINING CHAR",
+        product__name: " Oda ottoman Oda ottoman",
         product__price__old: "699.00",
         product__price__new: "699.00",
       },

@@ -246,10 +246,38 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 391px) {
   .faq {
+    margin-top: 68px;
     &__menu {
       width: 360px;
+      .faq__items {
+        margin-bottom: 31px;
+        .faq__questions {
+          h2 {
+            font-size: 18px;
+            line-height: 30px;
+            margin: 18px 0;
+            margin-top: 10px;
+            width: 300px;
+          }
+        }
+        .faq__answer {
+          p {
+            font-size: 16px;
+            line-height: 23px;
+            margin-top: 20px;
+            width: 361px;
+          }
+        }
+      }
+    }
+    &__title {
+      h1 {
+        font-size: 30px;
+        line-height: 42px;
+        width: 204px;
+      }
     }
   }
 }
