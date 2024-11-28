@@ -83,7 +83,7 @@ function checkScreenSize() {
     pagination: false,
   });
 
-  if (width <= 391) {
+  if (width <= 400) {
     splide_mobile.mount();
   } else if (width <= 1500 && width >= 769) {
     splide_ipad.mount();
