@@ -1,0 +1,91 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+footer {
+  background: $color-black;
+  color: $color-white;
+  @include center-flex;
+  .footer {
+    h2 {
+      font-family: Lora;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 42px;
+      text-align: center;
+      margin: 55px 0 -11px;
+    }
+    p {
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      margin: 20px;
+    }
+    .footer__input {
+      position: relative;
+      input {
+        padding: 17px;
+        width: 465px;
+        margin-top: 2px;
+        margin-bottom: 14px;
+      }
+      i {
+        color: $color-black;
+        position: absolute;
+        top: 16px;
+        right: 20px;
+      }
+    }
+    .icon {
+      margin: 10px;
+      i {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    .footer {
+      .footer__input {
+        input {
+          padding: 12px 17px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 391px) {
+  footer {
+    .footer {
+      h2 {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 33.6px;
+        text-align: left;
+        margin: 20px 0;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+        margin: 20px 0px;
+      }
+      .footer__input {
+        input {
+          padding: 14px 17px;
+          width: 100%;
+        }
+      }
+    }
+    .icon {
+      margin: 10px 0;
+      text-align: left;
+    }
+  }
+}
