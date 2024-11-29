@@ -9,7 +9,7 @@ const popupSuccess = document.querySelector(".popup-success");
 const popupError = document.querySelector(".popup-error");
 const turnOff = document.querySelector(".icon-popup-fetch");
 
-const recaptcha = document.querySelector(".popup-recaptcha");
+// const recaptcha = document.querySelector(".popup-recaptcha");
 
 const inputs = document.querySelectorAll(".input-form");
 // console.log(inputs);
@@ -51,20 +51,12 @@ formEl.addEventListener("submit", (event) => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Log response từ server
-        if (data.success) {
+        if (!data.success) {
+          console.log(body);
           // Lưu thông tin vào Local Storage
-          localStorage.setItem(
-            "userData",
-            JSON.stringify({
-              fullname: fullName,
-              phone: phone,
-              email: email,
-              address: address,
-              message: message,
-            })
-          );
+          localStorage.setItem("userData", body);
         }
-        recaptcha.classList.add("action");
+        // recaptcha.classList.add("action");
         showPopupSuccess();
       })
       .catch((error) => {
@@ -86,7 +78,7 @@ formEl.addEventListener("submit", (event) => {
 window.addEventListener("load", () => {
   const userData = JSON.parse(localStorage.getItem("userData"));
   if (userData) {
-    fullName.value = userData.name;
+    fullName.value = userData.fullname;
     phone.value = userData.phone;
     email.value = userData.email;
     address.value = userData.address;
