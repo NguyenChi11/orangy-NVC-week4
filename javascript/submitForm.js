@@ -51,6 +51,19 @@ formEl.addEventListener("submit", (event) => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data); // Log response từ server
+        if (data.success) {
+          // Lưu thông tin vào Local Storage
+          localStorage.setItem(
+            "userData",
+            JSON.stringify({
+              fullname: fullName,
+              phone: phone,
+              email: email,
+              address: address,
+              message: message,
+            })
+          );
+        }
         recaptcha.classList.add("action");
         showPopupSuccess();
       })
@@ -67,5 +80,16 @@ formEl.addEventListener("submit", (event) => {
         popupSuccess.classList.remove("action");
       });
     }
+  }
+});
+
+window.addEventListener("load", () => {
+  const userData = JSON.parse(localStorage.getItem("userData"));
+  if (userData) {
+    fullName.value = userData.name;
+    phone.value = userData.phone;
+    email.value = userData.email;
+    address.value = userData.address;
+    message.value = userData.message;
   }
 });
