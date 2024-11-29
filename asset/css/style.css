@@ -37,6 +37,7 @@
 .header__information .header__address,
 .header__information .header__phone {
   margin: 5px 20px;
+  cursor: pointer;
 }
 .header__information .header__address a,
 .header__information .header__phone a {
@@ -62,6 +63,7 @@
   font-family: "Lora";
   font-weight: 500;
   margin: 1px;
+  cursor: pointer;
 }
 
 .icon__arrow {
@@ -159,6 +161,7 @@
   font-family: Poppins;
 }
 .banner__content__title {
+  cursor: pointer;
   margin-top: 30px;
 }
 .banner__content__title p {
@@ -268,6 +271,7 @@
 }
 
 .product__gird {
+  cursor: pointer;
   margin: 0 13%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -562,6 +566,9 @@
   margin: 0 13%;
 }
 
+.splide__slide .product__slider {
+  cursor: pointer;
+}
 .splide__slide .product__slider .product__image {
   width: 100%;
 }
@@ -1016,9 +1023,11 @@
   font-family: "Poppins";
 }
 .form__wrapper__button {
+  cursor: pointer;
   margin-top: 36px;
 }
 .form__wrapper__button button {
+  cursor: pointer;
   color: #ffffff;
   background: #000000;
   padding: 12px 56px;
@@ -1447,6 +1456,7 @@
   margin-bottom: 20px;
 }
 .faq__menu .faq__items .faq__questions {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1928,6 +1938,7 @@
   margin-top: 20px;
 }
 .contact__between .contact__body .contact__btn button {
+  cursor: pointer;
   padding: 12px 46px;
 }
 .contact__right {
@@ -2371,6 +2382,7 @@ footer .footer .footer__input input {
   margin-bottom: 14px;
 }
 footer .footer .footer__input i {
+  cursor: pointer;
   padding: 20px;
   color: #000000;
   position: absolute;
@@ -2378,6 +2390,7 @@ footer .footer .footer__input i {
   right: 8px;
 }
 footer .footer .icon {
+  cursor: pointer;
   margin: 10px;
 }
 footer .footer .icon i {

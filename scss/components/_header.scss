@@ -9,6 +9,7 @@
   .header__address,
   .header__phone {
     margin: 5px 20px;
+    cursor: pointer;
     a {
       color: $color-white;
       text-decoration: none;
@@ -29,6 +30,7 @@
   font-family: "Lora";
   font-weight: 500;
   margin: 1px;
+  cursor: pointer;
 }
 .icon__arrow {
   display: none;

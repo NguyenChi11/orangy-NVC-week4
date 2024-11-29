@@ -46,6 +46,7 @@
   @include center-flex;
 }
 .product__gird {
+  cursor: pointer;
   margin: 0 13%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

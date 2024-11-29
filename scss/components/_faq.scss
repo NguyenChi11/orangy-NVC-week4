@@ -21,6 +21,7 @@
     .faq__items {
       margin-bottom: 20px;
       .faq__questions {
+        cursor: pointer;
         @include center-flex;
         justify-content: space-between;
         h2 {
