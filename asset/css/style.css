@@ -2369,10 +2369,11 @@ footer .footer .footer__input input {
   margin-bottom: 14px;
 }
 footer .footer .footer__input i {
+  padding: 20px;
   color: #000000;
   position: absolute;
-  top: 16px;
-  right: 20px;
+  top: 0px;
+  right: 8px;
 }
 footer .footer .icon {
   margin: 10px;
