@@ -135,18 +135,27 @@
 }
 .popup-recaptcha {
   @include center-flex;
+  flex-direction: column;
   background: $background;
   position: fixed;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   visibility: hidden;
   opacity: 0; //0
   transition: opacity 0.3s, visibility 0.3s;
-  z-index: 500;
+  z-index: 900;
   top: 0;
   left: 0;
   .g-recaptcha {
     @include center-flex;
+  }
+  button {
+    padding: 10px 25px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: $color-white;
+    color: $color-black;
+    font-family: Lora;
   }
 }
 

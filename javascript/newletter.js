@@ -5,6 +5,7 @@ const formFooter = document.querySelector(".footer__input");
 const popupSuccess = document.querySelector(".popup-success");
 const popupError = document.querySelector(".popup-error");
 const turnOff = document.querySelector(".icon-popup-fetch");
+const turnError = document.querySelector(".icon-popup-error");
 
 // Hàm kiểm tra email hợp lệ
 function isValidEmail(email) {
@@ -18,7 +19,10 @@ formFooter.addEventListener("submit", (event) => {
   const emailValue = inputFooter.value;
   // Kiểm tra email hợp lệ
   if (!isValidEmail(emailValue)) {
-    console.log("check email"); // Hoặc hiển thị thông báo bằng popup tùy bạn
+    popupError.classList.add("action");
+    turnError.addEventListener("click", () => {
+      popupError.classList.remove("action");
+    }); // Hoặc hiển thị thông báo bằng popup tùy bạn
     return;
   }
 
