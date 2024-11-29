@@ -9,7 +9,8 @@ const popupSuccess = document.querySelector(".popup-success");
 const popupError = document.querySelector(".popup-error");
 const turnOff = document.querySelector(".icon-popup-fetch");
 
-// const recaptcha = document.querySelector(".popup-recaptcha");
+const recaptcha = document.querySelector(".popup-recaptcha");
+const btnRecaptcha = document.querySelector(".btn-recaptcha");
 
 const inputs = document.querySelectorAll(".input-form");
 // console.log(inputs);
@@ -56,7 +57,10 @@ formEl.addEventListener("submit", (event) => {
           // Lưu thông tin vào Local Storage
           localStorage.setItem("userData", body);
         }
-        // recaptcha.classList.add("action");
+        recaptcha.classList.add("action");
+        btnRecaptcha.addEventListener("click", () => {
+          recaptcha.classList.remove("action");
+        });
         showPopupSuccess();
       })
       .catch((error) => {

@@ -41,7 +41,7 @@
 
     <!-- popup success -->
     <div class="popup-success" id="popup">
-      <div class="popup-wrapper" data-aos="fade-up-right">
+      <div class="popup-wrapper">
         <div class="popup-content">
           <h1>Thank you!</h1>
           <p>Data has been sent successfully.</p>
@@ -53,12 +53,12 @@
     </div>
 
     <!-- popup error -->
-    <div class="popup-overlay popup-error" id="popup">
+    <div class="popup-error" id="popup">
       <div class="popup-wrapper">
         <div class="popup-content">
           <h1>Oops! An error occurred..</h1>
           <p>Please check your information and try again</p>
-          <div class="icon-popup-fecth">
+          <div class="icon-popup-error icon-popup-fetch">
             <i class="fa-regular fa-circle-xmark"></i>
           </div>
         </div>
@@ -250,13 +250,14 @@
           <button type="submit" class="input-btn">SUBMIT NOW</button>
           <p class="input__required">* Required</p>
         </div>
-        <div class="popup-recaptcha">
-          <div
-            class="g-recaptcha"
-            data-sitekey="6LeF6YwqAAAAAN5i-KDEKqDsGCOMNOxuL5xVnguK"
-          ></div>
-        </div>
       </form>
+      <div class="popup-recaptcha">
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LeF6YwqAAAAAN5i-KDEKqDsGCOMNOxuL5xVnguK"
+        ></div>
+        <button class="btn-recaptcha">Accept</button>
+      </div>
     </div>
 
     <!-- Inspiration -->
