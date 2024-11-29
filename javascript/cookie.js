@@ -1,6 +1,9 @@
 const popup = document.getElementById("popup");
 const icon = document.querySelector(".icon-popup");
 const popupWrapper = document.querySelector(".popup-wrapper");
+const cookieBar = document.querySelector(".popup-cookie-bar");
+const btnAccept = document.querySelector(".btn-accept");
+const btnIgnore = document.querySelector(".btn-ignore");
 
 // thiết lập cookie
 function setCookie(name, value, times) {
@@ -45,4 +48,24 @@ document.addEventListener("touchstart", () => {
       popup.classList.add("active");
     }, 0);
   }
+});
+
+// cookie bar
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Chỉ hiển thị popup nếu cookie "popupDismissed" chưa được thiết lập
+  if (!getCookie("cookieBarDismissed")) {
+    setTimeout(() => {
+      cookieBar.classList.add("active");
+    }, 3000);
+  }
+  btnAccept.addEventListener("click", () => {
+    setCookie("cookieBarDismissed", "true", 24 * 6 * 30);
+    cookieBar.classList.remove("active");
+  });
+
+  btnIgnore.addEventListener("click", () => {
+    setCookie("cookieBarDismissed", "true", 0.1);
+    cookieBar.classList.remove("active");
+  });
 });
