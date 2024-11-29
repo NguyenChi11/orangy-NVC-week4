@@ -2950,6 +2950,11 @@ footer .footer .icon i {
   margin: 0;
   box-sizing: border-box;
 }
+* a {
+  text-decoration: none; /* Bỏ gạch chân */
+  color: inherit; /* Sử dụng màu chữ từ phần tử cha */
+  cursor: pointer; /* Đảm bảo con trỏ chuột là dạng pointer khi hover */
+}
 
 body {
   font-family: "Poppins";
