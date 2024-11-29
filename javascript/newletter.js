@@ -8,31 +8,29 @@ const turnOff = document.querySelector(".icon-popup-fetch");
 
 // Hàm kiểm tra email hợp lệ
 function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return emailRegex.test(email);
 }
 
 formFooter.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  const emailValue = inputFooter.value.trim();
-
+  const emailValue = inputFooter.value;
   // Kiểm tra email hợp lệ
   if (!isValidEmail(emailValue)) {
-    alert("Vui lòng nhập email hợp lệ!"); // Hoặc hiển thị thông báo bằng popup tùy bạn
+    console.log("check email"); // Hoặc hiển thị thông báo bằng popup tùy bạn
     return;
   }
 
   // Tạo FormData nếu email hợp lệ
-  let formData = new FormData();
-  formData.append("emailFooter", emailValue);
+  const formData = new FormData();
+  formData.append("email", emailValue);
 
   fetch(
     "https://script.google.com/macros/s/AKfycbwlnruolAEFek8x1wUYLxocHdIuwHWrHYXSfzSXZSygslzejM-ppDe76EuK8jkKWyB4/exec",
     {
-      body: formData,
       method: "POST",
-      keepalive: true,
+      body: formData,
     }
   )
     .then((response) => response.json())

@@ -15,12 +15,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="./asset/css/aos.css" />
+    <script src="./javascript/aos.js"></script>
   </head>
   <body>
     <!-- popup -->
 
     <div class="popup-overlay" id="popup">
-      <div class="popup-wrapper">
+      <div class="popup-wrapper" data-aos="fade-right">
         <div class="popup-image">
           <img src="./asset/images/popup.png" alt="" />
         </div>
@@ -39,7 +41,7 @@
 
     <!-- popup success -->
     <div class="popup-success" id="popup">
-      <div class="popup-wrapper">
+      <div class="popup-wrapper" data-aos="fade-up-right">
         <div class="popup-content">
           <h1>Thank you!</h1>
           <p>Data has been sent successfully.</p>
@@ -97,7 +99,7 @@
     </header>
     <!-- phần banner -->
     <div class="banner">
-      <div class="banner__content">
+      <div class="banner__content" data-aos="fade-up">
         <h1>EMBRACE VISION</h1>
         <h4>Clever products for every corner</h4>
         <div class="banner__content__title">
@@ -108,7 +110,7 @@
 
     <!-- phần product -->
     <div class="product__title__all">
-      <div class="product__menu">
+      <div class="product__menu" data-aos="fade-up-right">
         <div class="product__menu__left">
           <h1>Our picks for you</h1>
         </div>
@@ -131,7 +133,11 @@
     <!-- product gird  -->
     <!-- CSS lại -->
     <div class="product__gird__list">
-      <div id="product__container" class="product__gird"></div>
+      <div
+        id="product__container"
+        class="product__gird"
+        data-aos="flip-left"
+      ></div>
     </div>
 
     <!-- product slider -->
@@ -143,7 +149,13 @@
       <div class="slider__list">
         <div class="splide" role="group" aria-label="Splide Basic HTML Example">
           <div class="splide__track">
-            <ul id="splide__list" class="splide__list"></ul>
+            <ul
+              id="splide__list"
+              class="splide__list"
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            ></ul>
           </div>
         </div>
       </div>
@@ -156,7 +168,7 @@
       >
     </div>
     <!--Sale Block-->
-    <div class="wrapper__block">
+    <div class="wrapper__block" data-aos="fade-up" data-aos-duration="3000">
       <div class="wrapper__image">
         <img src="./asset/images/product_2.jpg" alt="" />
       </div>
@@ -179,7 +191,7 @@
     </div>
 
     <!--form input-->
-    <div class="form">
+    <div class="form" data-aos="zoom-out-down">
       <div class="form__title">
         Contact us to order and receive purchase advice
       </div>
@@ -248,7 +260,7 @@
     </div>
 
     <!-- Inspiration -->
-    <div class="inspiration">
+    <div class="inspiration" data-aos="zoom-in-right">
       <div class="inspiration__title">
         <h2>Change the look of your house, change the perspective of others</h2>
       </div>
@@ -307,7 +319,13 @@
     </div>
 
     <!-- FAQs -->
-    <div class="faq">
+    <div
+      class="faq"
+      data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500"
+    >
       <div class="faq__title">
         <h1>Discover more in our FAQs</h1>
       </div>
@@ -433,7 +451,12 @@
     </div>
 
     <!-- single banner -->
-    <div class="single__banner">
+    <div
+      class="single__banner"
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+    >
       <div class="single__text">
         <h2>Elevate Your Home</h2>
         <p>Clever products for every corner</p>
@@ -441,7 +464,13 @@
     </div>
 
     <!-- over service -->
-    <div class="icon__list">
+    <div
+      class="icon__list"
+      data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500"
+    >
       <div class="icon__item">
         <img src="./asset/images/icon_1.png" alt="" />
         <div class="icon__title">
@@ -477,7 +506,12 @@
     </div>
 
     <!-- contact shop -->
-    <div class="contact">
+    <div
+      class="contact"
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
+    >
       <div class="contact__left">
         <img
           class="image__contact_1"
@@ -519,7 +553,7 @@
         />
       </div>
     </div>
-    <footer>
+    <footer data-aos="fade-up" data-aos-anchor-placement="center-bottom">
       <div class="footer">
         <h2>Subscribe to get 10% OFF</h2>
         <p>Subscribe for store updates and discounts.</p>
@@ -552,6 +586,8 @@
     <script type="module" src="./javascript/newletter.js"></script>
     <script type="module" src="./javascript/submitForm.js"></script>
     <script type="module" src="./javascript/product__all__list.js"></script>
-    <script></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
